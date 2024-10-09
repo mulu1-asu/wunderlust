@@ -1,6 +1,6 @@
 /* Kevin Lu */
 
-/* reset */
+/* css reset below */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -154,7 +154,7 @@ p, h1, h2 {
     margin-bottom: 0.7rem;
 }
 
-/* hamburger menu  */
+/* hamburger menu, following css-tricks's example */
 
 #menu-toggle {
     display: block;
@@ -177,7 +177,7 @@ p, h1, h2 {
   }
   
   
-  /*  hamburger button hidden inside input element */
+  /* hamburger button hidden inside input element */
   #menu-toggle input {
     display: block;
     width: 30px;
@@ -220,16 +220,12 @@ p, h1, h2 {
     transform-origin: 0% 0%;
   }
   
-  /* 
-   * Change the color of the hamburger when toggled
-   */
+  /* change the color of the hamburger when toggled */
   #menu-toggle input:checked + label div {
     background-color: var(--black);
   }
   
-  /*
-   * Use absolute positioning to place the menu off-screen
-   */
+  /* absolute positioning to place the menu off-screen */
   ul {
     position: absolute;
     width: 300px;
@@ -237,7 +233,7 @@ p, h1, h2 {
     padding: 50px;
     background: #ededed;
     list-style-type: none;
-    /* Hide the menu off-screen to the right */
+    /* hide the menu off-screen to the right */
     right: -100%;
     transition: right 0.3s ease; 
   }
@@ -247,9 +243,7 @@ p, h1, h2 {
     font-size: 22px;
   }
   
-  /*
-   * Slide the menu in from right when the input is checked
-   */
+  /* slide the menu in from right when the input is checked || unsure why it doesn't fully appear */
   #menu-toggle input:checked ~ ul {
     right: 0;
   }
