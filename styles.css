@@ -90,8 +90,6 @@ height:auto;
     overflow:hidden;
     }
 
-@media only screen and (max-width: 600px) {
-
 /* base font(s) */
 
 h1, h2, h3 {
@@ -149,6 +147,7 @@ p, h1, h2 {
     width: 100%;
     margin-bottom: 0.7rem;
 }
+
 
 /* plan */
 
@@ -280,5 +279,4 @@ footer a, footer p {
     font-family: "Montserrat";
     font-size: 16px;
     color: var(--black);
-}
 }
