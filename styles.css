@@ -1,0 +1,284 @@
+/* Kevin Lu */
+
+/* reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* variable(s)  */
+:root {
+    --yellow: #f6d64a;
+    --teal: #55bcd5;
+    --purple: #9b26b0;
+    --blue: #499bd2;
+    --dark-gray: #222222;
+    --light-gray: #eaeaea;
+    --white: #ffffff; 
+    --black: #000000;
+}
+
+/* skip link */
+#skip {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
+
+/* hidden heading */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+@media only screen and (max-width: 600px) {
+
+/* base font(s) */
+
+h1, h2, h3 {
+    font-family: "Molle";
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: "Montserrat";
+}
+
+h1 {
+    font-size: 50px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+#intro p {
+    font-size: 16px;
+}
+
+h2, h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+/* dark mode check */ 
+@media (prefers-color-scheme: dark) {
+    #testimonial #contact {
+    background-color: var(--dark-gray);
+    }
+}    
+
+/* header */
+
+header {
+        background-image: linear-gradient(var(--teal), var(--white));
+}
+
+section{
+        margin: 1rem 0;
+        padding: 1rem;
+}
+
+p, h1, h2 {
+    margin: 1rem 2rem;
+    line-height: 2rem;
+}
+
+#main-content img {
+    width: 100%;
+    margin-bottom: 0.7rem;
+}
+
+/* plan */
+
+#plan {
+    background-color: var(--yellow);
+}
+
+#plan section {
+    background-color: var(--teal);
+    border-style: solid;
+    border-radius: 0.5rem;
+    border-width: 0.2rem;
+    border-color: var(--white);
+    padding: 3rem;
+}
+
+#plan h4 {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* testimonials */
+
+#testimonials #contact {
+    background-color: var(--white);
+}
+
+#testimonials h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#testimonials p, #testimonials q {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* about */
+
+#about {
+    background-color: var(--blue);
+}
+
+
+#about section {
+    max-width: 10rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+/* contact (form) */
+
+.form-required {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: italic;
+}
+
+#contact section {
+	display: block;
+	width: 300px;
+	padding: 1em;
+	margin: 0 auto;
+	color: #222;
+	font-size: 1.1em;
+}
+
+.required {
+    color: var(--purple);
+}
+
+#contact label, #contact legend {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contact input {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-color: var(--purple);
+}
+
+#contact label {
+    margin-top: 1rem;
+}
+
+input, label, fieldset{
+	display: block;
+	width: 95%;   
+}
+
+input[type=submit]{
+	padding: 0.75em;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	background-color: var(--purple);
+	border: none;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a, footer p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: var(--black);
+}
+}
